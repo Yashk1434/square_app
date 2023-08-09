@@ -1,0 +1,57 @@
+<html>
+	<head>
+
+	<title>Square App by Yash </title>
+
+	<style>
+	
+		* {font-size:50px;}
+		body {background-color:lightgrey;}
+
+	
+	</style>
+	
+	<script>
+
+		function square(){
+		
+			event.preventDefault();
+			let ans = document.getElementById("ans");
+			let num = document.getElementById("num");
+			
+			if(num.value ==""){
+				alert("Number is Empty");
+				ans.innerHTML("");
+				num.focus();
+				return;
+			}
+			
+			let n = parseFloat(num.value);
+			let r = n * n;
+			ans.innerHTML = "Square is " + r.toFixed(2);		
+		
+		}
+	</script>
+
+	</head>
+
+	<body>
+	<center>
+	
+	<h1> Square App </h1>
+	
+	<form onsubmit="square()">
+	<input type="number" step="any" placeholder="Enter Number" id="num"/>
+	<br><br>
+	<input type="submit" value="Find Square" />
+	</form>
+	
+	<h2 id="ans"> </h2>
+
+	
+	</center>
+	</body>
+
+
+
+</html>
